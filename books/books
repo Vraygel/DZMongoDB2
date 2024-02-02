@@ -1,0 +1,32 @@
+[
+	{
+		"id": "JU31v0FC5-EK47F2ZZ9-gr2qR4OA0-io6k96Nx3",
+		"title": "title",
+		"description": "description",
+		"authors": "authors",
+		"favorite": "favorite",
+		"fileCover": "fileCover",
+		"fileName": "fileName",
+		"fileBook": "filename"
+	},
+	{
+		"id": "2A5CM6Ry8-SI4P92mI2-cv4cj6us2-YG8Y22m20",
+		"title": "title",
+		"description": "description",
+		"authors": "authors",
+		"favorite": "favorite",
+		"fileCover": "fileCover",
+		"fileName": "fileName",
+		"fileBook": "filename"
+	},
+	{
+		"id": "PF61H2g79-bO7np9mE4-gt3ce8275-Zl0Bv4PL5",
+		"title": "title",
+		"description": "description",
+		"authors": "authors",
+		"favorite": "favorite",
+		"fileCover": "fileCover",
+		"fileName": "fileName",
+		"fileBook": "filename"
+	}
+]
