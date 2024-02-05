@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <title>Редактирование книги</title>
+</head>
+<body>
+    <h1>Редактирование книги: <%= book.title %></h1>
+    <form method="post" action="/update/<%= book.id %>">
+        <label for="title">Название:</label>
+        <input type="text" id="title" name="title" value="<%= book.title %>" required>
+        <br>
+        <label for="authors">Автор(ы):</label>
+        <input type="text" id="authors" name="authors" value="<%= book.authors %>" required>
+        <br>
+        <label for="description">Описание:</label>
+        <textarea id="description" name="description" required><%= book.description %></textarea>
+        <br>
+        <label for="favorite">Избранное:</label>
+        <input type="checkbox" id="favorite" name="favorite" <% if (book.favorite) { %>checked<% } %>>
+        <br>
+        <button type="submit">Сохранить изменения</button>
+    </form>
+    <a href="/">Назад к списку книг</a>
+</body>
+</html>

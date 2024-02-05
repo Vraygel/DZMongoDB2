@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <title>Список всех книг</title>
+</head>
+<body>
+    <% if(books.length) { %>
+
+    <h1>Список всех книг</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Автор(ы)</th>
+                <th>Описание</th>
+                <th>Избранное</th> <!-- Дополнительная колонка для избранного -->
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(book => { %>
+                <!-- Каждая книга представлена в виде строки таблицы -->
+                <tr>
+                    <!-- Значения свойств размещены в ячейках таблицы -->
+                    <td><a href="/view/<%= book.id %>"><%= book.title %></a><a href="/delete/<%= book.id %>">Удалить книгу</a></td>
+                    
+                    <td><%= book.authors %></td>
+                    <td><%= book.description %></td>
+                    <!-- Дополнительная колонка для избранного -->
+                    <td>
+                        <% if (book.favorite) { %>
+                            (Избранное)
+                        <% } %>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>   
+        <h3 class="mt-5">Список книг пустой</h3>
+    <% } %>  
+    <a href="/create">Добавить новую книгу</a>
+</body>
+</html>

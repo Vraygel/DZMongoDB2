@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <title>Добавление книги</title>
+</head>
+<body>
+    <h1>Добавление новой книги</h1>
+    <form method="post" action="/create">
+        <label for="title">Название:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="authors">Автор(ы):</label>
+        <input type="text" id="authors" name="authors" required>
+        <br>
+        <label for="description">Описание:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <label for="favorite">Избранное:</label>
+        <input type="checkbox" id="favorite" name="favorite">
+        <br>
+        <button type="submit">Добавить книгу</button>
+    </form>
+    <a href="/">Назад к списку книг</a>
+</body>
+</html>
